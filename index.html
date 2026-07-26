@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>楽待掲載依頼メール送信ツールを起動</title>
+<style>
+  body {
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: #fafafa;
+    color: #333;
+    text-align: center;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+  button {
+    margin-top: 16px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: #2f6fed;
+    color: #fff;
+    cursor: pointer;
+  }
+  p.note {
+    color: #777;
+    font-size: 13px;
+    margin-top: 24px;
+  }
+</style>
+</head>
+<body>
+  <h2>楽待掲載依頼メール送信ツールを起動しています…</h2>
+  <p>自動で起動しない場合は、下のボタンを押してください。</p>
+  <button onclick="location.href='rakumachi-mail://run'">ツールを起動する</button>
+  <p class="note">
+    初回、または一部のブラウザでは「外部アプリを開こうとしています」という確認ダイアログが表示されます。許可すると起動します。<br>
+    起動しない場合は、事前にrakumachi-mail:// の登録（register_rakumachi_protocol.ps1の実行）が済んでいるか確認してください。
+  </p>
+  <script>
+    window.location.href = "rakumachi-mail://run";
+  </script>
+</body>
+</html>
